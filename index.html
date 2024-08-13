@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto </title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script type="text/JavaScript" src="app.js"></script>
+</head>
+<body class="body">
+    <header class="header">
+        <img class="logo" src="./assets/LogoSinFondo.png" alt="logo de Alura">
+    </header>
+    <main class="main">
+        <div class="titulo">
+        <h1 class="titulo__estilo">Encriptador de texto</h1>
+        </div>
+        <div class="orden__secciones">
+            <section class="seccion__encriptar">
+                <textarea class="seccion__encriptar__texto"  name="ingreso" placeholder="Escribe el texto" id="textoEncriptar" cols="30" rows="10"></textarea>
+                <div class="seccion__encriptar_bloque_advertencia">
+                    <img class="seccion__encriptar__advertencia"src="./assets/Group.png" width= 10px height= 10px ="warning">
+                    <h6 class="seccion__encriptar__condicion">Solo letras sin acento</h6>
+                </div>
+                <div class="seccion__encriptar__boton">
+                    <button type="button" class="seccion__botton__encriptar" id="buttonEncriptar">Encriptar</button>
+                    <button type="button" class="seccion__botton__desencriptar" id="buttonDesencriptar">Desencriptar</button>
+                    <button type="button" class="seccion__botton__copiar" id="buttonCopiar">Copiar</button>
+                </div>  
+            </section>
+            <section class="seccion__desencriptar">
+                <textarea class="seccion__desencriptar__texto"  name="resultado" id="textoDesencriptar" cols="30" rows="10"></textarea>
+                <div class="seccion__desencriptar__detective" id="imagen">
+                    <img class="seccion__desencriptar__detective__superponer" src="./assets/detective.jpeg" alt="Detective con interrogantes">
+                </div>
+                <div class="mesaje__parrafo" id="superponerMensajeParrafo">
+                    <div class="bloque__mensaje">
+                        <h3 class="bloque__mensaje__superponer"><strong class="negrita">Ningun mensaje fué encontrado</strong></h3>
+                    </div>
+                    <div class="bloque__parrafo">
+                        <p class="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__texto">Desafio 1 de programa Oracle-Alura Latam, desarrollado por Harol Sebastian Moreno Medina</p>
+    </footer>
+</body>
+<script>
+    var btn = document.querySelector("#buttonEncriptar");
+    btn.onclick = encriptar;
+    var btn2 = document.querySelector("#buttonDesencriptar");
+    btn2.onclick = desencriptar;
+    var btn3 = document.querySelector("#buttonCopiar");
+    btn3.onclick = copiarOracion;
+</script>
+</html>
